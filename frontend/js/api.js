@@ -1,7 +1,7 @@
 // Auto-detects backend URL — works locally and on Vercel
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:3002'
-  : 'https://sainket-task-02-weather-api.vercel.app';
+  : 'https://weather-psi-self-16.vercel.app';
 
 async function fetchWeather(city) {
   const response = await fetch(`${API_BASE}/api/weather?city=${encodeURIComponent(city)}`);
